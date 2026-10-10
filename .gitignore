@@ -1,0 +1,14 @@
+# Windows / editors
+Thumbs.db
+Desktop.ini
+.vscode/
+*.code-workspace
+
+# Logs / temp
+*.log
+*.tmp
+
+# Firebase (keep firebase.json, ignore local-only files)
+.firebaserc
+firebase-debug.log
+firestore-debug.log

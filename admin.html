@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seller Central / Admin — ShopZone</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.admin-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}
+.stat{background:var(--card,#fff);border:1px solid #e5e7eb;border-radius:12px;padding:14px}
+.stat b{font-size:22px;display:block}
+.stat span{font-size:12px;color:#6b7280}
+.admin-table{width:100%;border-collapse:collapse;font-size:13px}
+.admin-table th,.admin-table td{border-bottom:1px solid #e5e7eb;padding:8px 10px;text-align:left;vertical-align:middle}
+.admin-table th{background:#f8fafc;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#475569}
+.admin-table img{width:40px;height:40px;object-fit:contain;background:#f8fafc;border-radius:8px}
+.tabs{display:flex;gap:8px;margin-bottom:14px}
+.tabs button{padding:8px 16px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-weight:600}
+.tabs button.on{background:#131921;color:#fff;border-color:#131921}
+</style>
+</head>
+<body data-nav="admin">
+<div id="siteHeader"></div>
+<main class="wrap page">
+  <h1 style="font-size:22px;margin-bottom:4px">Seller Central — Admin Dashboard</h1>
+  <p class="muted small" style="margin-bottom:16px">Manage products, orders and store data. Changes save in <code>localStorage</code> (demo only).</p>
+  <div class="admin-stats" id="stats"></div>
+  <div class="tabs" role="tablist">
+    <button id="tabOrders" class="on">Orders</button>
+    <button id="tabProducts" class="">Products</button>
+    <button id="tabSettings" class="">Settings</button>
+    <span style="flex:1"></span>
+    <button id="btnLogout" title="Sign out from Admin">Logout</button>
+  </div>
+  <section class="card" id="panel"></section>
+</main>
+<div id="siteFooter"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

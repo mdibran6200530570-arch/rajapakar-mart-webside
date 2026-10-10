@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop results — ShopZone</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ff9d2e'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%2314202e'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body data-nav="products">
+<div id="siteHeader"></div>
+
+<main class="wrap page">
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"></nav>
+
+  <div class="listing">
+    <!-- ============================ FILTERS ============================ -->
+    <aside class="filters" id="filters">
+      <div class="section-head" style="margin-bottom:6px">
+        <h3 style="font-size:16px">Filters</h3>
+        <button class="linkbtn" id="clearFilters" style="margin-left:auto">Clear all</button>
+      </div>
+
+      <details class="filter-group" open>
+        <summary>Department</summary>
+        <div id="fCat"></div>
+      </details>
+
+      <details class="filter-group" open>
+        <summary>Brand</summary>
+        <div id="fBrand"></div>
+      </details>
+
+      <details class="filter-group" open>
+        <summary>Price</summary>
+        <div class="price-range">
+          <input class="input" type="number" id="pMin" placeholder="Min" min="0">
+          <span class="muted">&ndash;</span>
+          <input class="input" type="number" id="pMax" placeholder="Max" min="0">
+        </div>
+        <input class="range" type="range" id="pRange" min="0" max="100" step="1" aria-label="Maximum price slider">
+        <p class="small muted" style="margin-top:6px">Up to <b id="pRangeOut">—</b></p>
+      </details>
+
+      <details class="filter-group" open>
+        <summary>Customer rating</summary>
+        <div id="fRating"></div>
+      </details>
+
+      <details class="filter-group" open>
+        <summary>Discount</summary>
+        <div id="fDiscount"></div>
+      </details>
+
+      <details class="filter-group">
+        <summary>Delivery</summary>
+        <div id="fDelivery"></div>
+      </details>
+
+      <details class="filter-group">
+        <summary>Colour</summary>
+        <div id="fColor"></div>
+      </details>
+    </aside>
+
+    <!-- ============================ RESULTS =========================== -->
+    <section>
+      <div class="toolbar">
+        <button class="btn btn-ghost btn-sm" id="toggleFilters" style="display:none">&#9776; Filters</button>
+        <span class="count" id="resultCount">—</span>
+        <span class="spacer"></span>
+        <label class="sr-only" for="sortBy">Sort by</label>
+        <select class="select" id="sortBy">
+          <option value="featured">Sort by: Featured</option>
+          <option value="discount">Price: High to Low discount</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating">Avg. Customer Review</option>
+          <option value="new">Newest Arrivals</option>
+        </select>
+        <div style="display:flex;gap:4px">
+          <button class="btn btn-ghost btn-sm" id="viewGrid" title="Grid view" aria-pressed="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z"/></svg>
+          </button>
+          <button class="btn btn-ghost btn-sm" id="viewList" title="List view" aria-pressed="false">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4 5h3v3H4V5Zm5 0h11v3H9V5ZM4 11h3v3H4v-3Zm5 0h11v3H9v-3Zm-5 6h3v3H4v-3Zm5 0h11v3H9v-3Z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="chips" id="chips"></div>
+      <div class="grid-products" id="grid"></div>
+      <div class="pagination" id="pager"></div>
+    </section>
+  </div>
+</main>
+
+<div id="siteFooter"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/products.js"></script>
+</body>
+</html>

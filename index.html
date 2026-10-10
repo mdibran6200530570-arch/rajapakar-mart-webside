@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rajapakar Mart — Online Shopping for Electronics, Fashion, Home &amp; More</title>
+<meta name="description" content="Rajapakar Mart is an Amazon-style e-commerce demo. Browse deals on mobiles, laptops, headphones, fashion, home appliances and more.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ff9d2e'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%2314202e'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body data-nav="home">
+<div id="siteHeader"></div>
+
+<main class="wrap">
+
+  <!-- ============================ HERO CAROUSEL ============================ -->
+  <section class="page">
+    <div class="hero" id="hero">
+      <button class="hero__nav prev" aria-label="Previous slide">&#10094;</button>
+      <button class="hero__nav next" aria-label="Next slide">&#10095;</button>
+      <div class="hero__dots" id="heroDots" role="tablist" aria-label="Slides"></div>
+    </div>
+  </section>
+
+  <!-- ============================ SHOP BY CATEGORY ======================== -->
+  <section class="page">
+    <div class="card">
+      <div class="section-head">
+        <h2>Shop by department</h2>
+        <a class="link" href="products.html">See all &rsaquo;</a>
+      </div>
+      <div class="cat-grid" id="catGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================== DEALS ================================ -->
+  <section class="page">
+    <div class="deal">
+      <div>
+        <h2>Today's Deals</h2>
+        <p id="dealSub">Hand-picked discounts, refreshed every 24 hours.</p>
+      </div>
+      <div class="countdown" id="countdown" aria-label="Deal ends in"></div>
+      <a class="btn btn-primary" href="products.html?sort=discount">View all deals</a>
+    </div>
+
+    <div class="deal-grid">
+      <div class="card">
+        <div class="section-head"><h2 style="font-size:18px">Best of Electronics</h2>
+          <a class="link" href="products.html?cat=Electronics">See all &rsaquo;</a></div>
+        <div class="rail">
+          <button class="rail__btn prev" aria-label="Scroll left">&#10094;</button>
+          <div class="rail__track" id="railElectronics"></div>
+          <button class="rail__btn next" aria-label="Scroll right">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="card" style="display:flex;flex-direction:column;gap:14px">
+        <div class="section-head" style="margin:0"><h2 style="font-size:18px">Top picks for you</h2></div>
+        <div id="railTopPicks" style="display:grid;gap:12px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= VALUE PROPS =========================== -->
+  <section class="page">
+    <div class="props" id="props"></div>
+  </section>
+
+  <!-- ============================= FASHION RAIL ========================== -->
+  <section class="page">
+    <div class="card">
+      <div class="section-head">
+        <h2>Fashion &amp; Lifestyle</h2>
+        <a class="link" href="products.html?cat=Fashion">See all &rsaquo;</a>
+      </div>
+      <div class="rail">
+        <button class="rail__btn prev" aria-label="Scroll left">&#10094;</button>
+        <div class="rail__track" id="railFashion"></div>
+        <button class="rail__btn next" aria-label="Scroll right">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== CATEGORY STRIP =========================== -->
+  <section class="page">
+    <div class="section-head"><h2>More to explore</h2></div>
+    <div class="grid-products" id="exploreGrid"></div>
+  </section>
+
+  <!-- ============================== PROMO BANNERS ======================== -->
+  <section class="page">
+    <div class="cat-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+      <a href="products.html?cat=Books" class="card" style="background:linear-gradient(135deg,#1d4ed8,#1e3a8a);color:#fff;display:block">
+        <h3 style="font-size:19px">Prime Reads</h3>
+        <p style="margin:6px 0 12px;opacity:.85;font-size:13px">Flat 40% off on 100+ bestsellers. Free delivery over ₹499.</p>
+        <span class="btn btn-primary btn-sm">Shop books</span>
+      </a>
+      <a href="products.html?cat=Home%20%26%20Kitchen" class="card" style="background:linear-gradient(135deg,#0f766e,#065f46);color:#fff;display:block">
+        <h3 style="font-size:19px">Home Makeover Sale</h3>
+        <p style="margin:6px 0 12px;opacity:.85;font-size:13px">Up to 60% off on furniture, lighting and kitchen appliances.</p>
+        <span class="btn btn-primary btn-sm">Shop home</span>
+      </a>
+      <a href="products.html?cat=Sports%20%26%20Outdoors" class="card" style="background:linear-gradient(135deg,#9a3412,#7c2d12);color:#fff;display:block">
+        <h3 style="font-size:19px">Fitness Fest</h3>
+        <p style="margin:6px 0 12px;opacity:.85;font-size:13px">Gym gear from ₹999. New members get an extra 10% off.</p>
+        <span class="btn btn-primary btn-sm">Shop sports</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<div id="siteFooter"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

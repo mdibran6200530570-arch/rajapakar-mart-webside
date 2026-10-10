@@ -1,0 +1,6 @@
+# Auto-detect text files, ensure LF on GitHub
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.jpg binary
+*.png binary
+*.svg text
